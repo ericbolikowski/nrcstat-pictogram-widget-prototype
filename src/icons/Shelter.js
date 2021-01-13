@@ -1,8 +1,11 @@
 import React from "react";
 import "./all-icons-style.scss";
 import { Icon } from "./Icon.js";
+import { IconBar } from "./IconBar";
 
-export function Shelter({ horizontalFill }) {
+export const Shelter = IconBar(ShelterIcon);
+
+function ShelterIcon({ horizontalFill }) {
   return (
     <Icon horizontalFill={horizontalFill}>
       <g>

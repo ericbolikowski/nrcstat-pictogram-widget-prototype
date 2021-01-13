@@ -1,8 +1,11 @@
 import React from "react";
 import "./all-icons-style.scss";
 import { Icon } from "./Icon.js";
+import { IconBar } from "./IconBar";
 
-export function Food({ horizontalFill }) {
+export const Food = IconBar(FoodIcon);
+
+function FoodIcon({ horizontalFill }) {
   return (
     <Icon horizontalFill={horizontalFill}>
       <g>

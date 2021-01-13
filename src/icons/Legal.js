@@ -1,8 +1,11 @@
 import React from "react";
 import "./all-icons-style.scss";
 import { Icon } from "./Icon.js";
+import { IconBar } from "./IconBar";
 
-export function Legal({ horizontalFill }) {
+export const Legal = IconBar(LegalIcon);
+
+function LegalIcon({ horizontalFill }) {
   return (
     <Icon horizontalFill={horizontalFill}>
       <g>

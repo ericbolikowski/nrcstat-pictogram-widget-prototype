@@ -1,8 +1,11 @@
 import React from "react";
 import "./all-icons-style.scss";
 import { Icon } from "./Icon.js";
+import { IconBar } from "./IconBar";
 
-export function WASH({ horizontalFill }) {
+export const WASH = IconBar(WASHIcon);
+
+function WASHIcon({ horizontalFill }) {
   return (
     <Icon horizontalFill={horizontalFill}>
       <g>

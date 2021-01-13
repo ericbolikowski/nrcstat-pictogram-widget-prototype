@@ -7,22 +7,13 @@ import { v4 as uuidv4 } from "uuid";
 
 export function Icon({
   children,
-  _horizontalFill,
+  horizontalFill,
   iconBaseColor = "#C2C2C2",
   fillColor = "#FDC82F"
 }) {
-  const [horizontalFill, setHorizontalFill] = useState(() => Math.random());
-  useEffect(() => {
-    setInterval(() => {
-      setHorizontalFill((fillDegree) => {
-        return fillDegree >= 1 ? 0 : fillDegree + 0.01;
-      });
-    }, 50);
-  }, []);
   const maskId = useMemo(() => uuidv4(), []);
-  console.log(horizontalFill);
   const maskWidth = Math.round(horizontalFill * 1000);
-  console.log(maskWidth);
+
   return (
     <svg
       className="icon-svg"

@@ -1,9 +1,11 @@
 import React from "react";
 import "./all-icons-style.scss";
 import { Icon } from "./Icon.js";
+import { IconBar } from "./IconBar";
 
-export function Education({ horizontalFill }) {
-  console.log(horizontalFill);
+export const Education = IconBar(EducationIcon);
+
+function EducationIcon({ horizontalFill }) {
   return (
     <Icon horizontalFill={horizontalFill}>
       <g>
