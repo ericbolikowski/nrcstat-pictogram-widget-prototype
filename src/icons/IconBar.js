@@ -5,7 +5,7 @@ import "../Widget.scss";
 
 const ICON_COUNT = 5;
 
-export const IconBar = (Icon) => ({ data }) => {
+export const IconBar = (Icon) => ({ data, iconBaseColor, fillColor }) => {
   const iconFillDegrees = useMemo(
     () =>
       Array(ICON_COUNT)
@@ -26,7 +26,12 @@ export const IconBar = (Icon) => ({ data }) => {
   return (
     <div className="icon-bar">
       {iconFillDegrees.map((fillDegree, key) => (
-        <Icon horizontalFill={fillDegree} key={key} />
+        <Icon
+          horizontalFill={fillDegree}
+          key={key}
+          iconBaseColor={iconBaseColor}
+          fillColor={fillColor}
+        />
       ))}
     </div>
   );

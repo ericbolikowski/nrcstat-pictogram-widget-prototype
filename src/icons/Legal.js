@@ -5,9 +5,9 @@ import { IconBar } from "./IconBar";
 
 export const Legal = IconBar(LegalIcon);
 
-function LegalIcon({ horizontalFill }) {
+function LegalIcon(props) {
   return (
-    <Icon horizontalFill={horizontalFill}>
+    <Icon {...props}>
       <g>
         <g>
           <g>

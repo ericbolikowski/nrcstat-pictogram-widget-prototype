@@ -5,9 +5,9 @@ import { IconBar } from "./IconBar";
 
 export const WASH = IconBar(WASHIcon);
 
-function WASHIcon({ horizontalFill }) {
+function WASHIcon(props) {
   return (
-    <Icon horizontalFill={horizontalFill}>
+    <Icon {...props}>
       <g>
         <g>
           <g>

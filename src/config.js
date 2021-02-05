@@ -14,3 +14,7 @@ export const DataColor = {
   Yellow: "#FDC82F",
   Red: "#FF2B00"
 };
+export const IconBaseColor = {
+  LightGrey: "#c2c2c2",
+  DarkGrey: "#ededed"
+};

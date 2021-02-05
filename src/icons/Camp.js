@@ -5,9 +5,9 @@ import { IconBar } from "./IconBar";
 
 export const Camp = IconBar(CampIcon);
 
-function CampIcon({ horizontalFill }) {
+function CampIcon(props) {
   return (
-    <Icon horizontalFill={horizontalFill}>
+    <Icon {...props}>
       <g>
         <g>
           <g>

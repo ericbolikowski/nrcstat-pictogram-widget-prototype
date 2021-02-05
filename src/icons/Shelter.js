@@ -5,9 +5,9 @@ import { IconBar } from "./IconBar";
 
 export const Shelter = IconBar(ShelterIcon);
 
-function ShelterIcon({ horizontalFill }) {
+function ShelterIcon(props) {
   return (
-    <Icon horizontalFill={horizontalFill}>
+    <Icon {...props}>
       <g>
         <g>
           <g>

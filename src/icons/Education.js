@@ -5,9 +5,9 @@ import { IconBar } from "./IconBar";
 
 export const Education = IconBar(EducationIcon);
 
-function EducationIcon({ horizontalFill }) {
+function EducationIcon(props) {
   return (
-    <Icon horizontalFill={horizontalFill}>
+    <Icon {...props}>
       <g>
         <g>
           <path

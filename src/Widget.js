@@ -1,9 +1,36 @@
 import React from "react";
-import { DataColor } from "./config";
-import { Camp, Education, Food, Legal, Shelter, WASH } from "./icons/index.js";
+import { DataColor, IconBaseColor } from "./config";
+import {
+  Camp,
+  Education,
+  Food,
+  Legal,
+  Shelter,
+  WASH,
+  PeopleFemale,
+  PeopleMale,
+  PeopleLittleBoy,
+  PeopleLittleGirl,
+  PeopleSchoolGirl,
+  PeopleSchoolBoy,
+  PeopleChildren,
+  PeopleRefugeeFamily,
+  PeopleRefugeeFamilyAlt,
+  PeopleRefugeesRunning
+} from "./icons/index.js";
 import "./Widget.scss";
 
 const WidgetIconMap = {
+  PeopleFemale,
+  PeopleMale,
+  PeopleLittleBoy,
+  PeopleLittleGirl,
+  PeopleSchoolGirl,
+  PeopleSchoolBoy,
+  PeopleChildren,
+  PeopleRefugeeFamily,
+  PeopleRefugeeFamilyAlt,
+  PeopleRefugeesRunning,
   Camp,
   Education,
   Food,
@@ -13,33 +40,34 @@ const WidgetIconMap = {
 };
 
 export function Widget({ title, subtitle, source, sections }) {
-  console.log(title);
+  const background = "white"; // light-grey dark-grey
+  const iconBaseColor =
+    background === "white" ? IconBaseColor.LightGrey : IconBaseColor.DarkGrey;
+
   return (
-    <div className="container">
+    <div className="container mobile background-white">
       <span className="title">{title}</span>
       <span className="subtitle">{subtitle}</span>
-      {sections.map((section) => (
-        <div className="section">
+      {sections.map((section, key) => (
+        <div className="section" key={key}>
           <span className="section-title">{section.title}</span>
-          {section.icons.map((icon) => {
+          {section.icons.map((icon, key) => {
             const Icon = WidgetIconMap[icon.icon];
-            return <Icon data={icon.data} />;
+            const fillColor = icon.overrideDataColor
+              ? icon.overrideDataColor
+              : section.dataColor;
+            return (
+              <Icon
+                key={key}
+                data={icon.data}
+                iconBaseColor={iconBaseColor}
+                fillColor={fillColor}
+              />
+            );
           })}
         </div>
       ))}
+      <span className="source">{source}</span>
     </div>
-  );
-}
-
-export function _Widget() {
-  return (
-    <>
-      <Camp data={0.55} />
-      <Education data={0.5} />
-      <Food data={0.5} />
-      <Legal data={0.5} />
-      <Shelter data={0.5} />
-      <WASH data={0.5} />
-    </>
   );
 }

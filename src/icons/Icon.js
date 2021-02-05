@@ -23,6 +23,7 @@ export function Icon({
       x="0px"
       y="0px"
       viewBox="0 0 1100 1100"
+      preserveAspectRatio="xMidYMid"
     >
       <mask id={maskId}>
         <rect x="50" y="0" width={maskWidth} height="1100" fill="white" />

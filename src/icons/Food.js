@@ -5,9 +5,9 @@ import { IconBar } from "./IconBar";
 
 export const Food = IconBar(FoodIcon);
 
-function FoodIcon({ horizontalFill }) {
+function FoodIcon(props) {
   return (
-    <Icon horizontalFill={horizontalFill}>
+    <Icon {...props}>
       <g>
         <g>
           <g>
