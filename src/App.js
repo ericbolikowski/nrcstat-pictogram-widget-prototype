@@ -14,13 +14,17 @@ const widget = {
       dataColor: DataColor.Orange,
       icons: [
         { icon: "PeopleRefugeesRunning", data: 0.7 },
-        { icon: "PeopleRefugeeFamilyAlt", data: 0.7 },
-        { icon: "PeopleRefugeeFamily", data: 0.7 },
-        { icon: "PeopleChildren", data: 0.7 },
-        { icon: "PeopleSchoolBoy", data: 0.7 },
-        { icon: "PeopleSchoolGirl", data: 0.7 },
-        { icon: "PeopleLittleGirl", data: 0.7 },
-        { icon: "PeopleLittleBoy", data: 0.7 },
+        {
+          icon: "PeopleRefugeeFamilyAlt",
+          data: 0.7,
+          overrideDataColor: DataColor.Yellow
+        },
+        { icon: "PeopleRefugeeFamily", data: 0.6 },
+        { icon: "PeopleChildren", data: 0.5 },
+        { icon: "PeopleSchoolBoy", data: 0.4 },
+        { icon: "PeopleSchoolGirl", data: 0.3 },
+        { icon: "PeopleLittleGirl", data: 0.2 },
+        { icon: "PeopleLittleBoy", data: 0.1 },
         { icon: "PeopleFemale", data: 0.7 },
         { icon: "PeopleMale", data: 0.7 },
         { icon: "Camp", data: 0.7 }
