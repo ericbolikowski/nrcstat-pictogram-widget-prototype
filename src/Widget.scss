@@ -1,15 +1,10 @@
-$Icon-LightGrey: #EDEDED;
-$Icon-DarkerGrey: #C2C2C2;
-$Icon-Orange: #FF7602;
-$Icon-Blue: #007D99;
-$Icon-Yellow: #FDC82F;
-$Icon-Red: #FF2B00;
 
 
 .container {
   display: flex;
   flex-direction: column;
   max-width: 700px;
+  padding: 50px 100px;
   .section {
     display: flex;
     flex-direction: column;
@@ -79,6 +74,7 @@ $Icon-Red: #FF2B00;
   }
 }
 .container.background-light-grey {
+  background-color: #919191;
   .title {
     color: #c2c2c2;
   }
@@ -93,6 +89,7 @@ $Icon-Red: #FF2B00;
   }
 }
 .container.background-dark-grey {
+  background-color: #474747;
   .title {
     color: #c2c2c2;
   }

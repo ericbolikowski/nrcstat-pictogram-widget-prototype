@@ -1,17 +1,18 @@
 import React from "react";
 import "./styles.css";
 import { Widget } from "./Widget";
-import { DataColor } from "./config";
+import { DataColor, BackgroundColorKey } from "./config";
 
 const widget = {
   title: "EDUCATION GENDER INEQUALITY IN YEMEN",
   subtitle:
     "Ongoing crisis further increases the gender gap. This is a subtitle that extends across two lines",
   source: "Source: Norwegian Refugee Council, May, 2020",
+  backgroundColor: BackgroundColorKey.White,
   sections: [
     {
       title: "ENROLLED IN PRIMARY EDUCATION",
-      dataColor: DataColor.Orange,
+      dataColor: DataColor.Blue,
       icons: [
         { icon: "PeopleRefugeesRunning", data: 0.7 },
         {
@@ -19,7 +20,11 @@ const widget = {
           data: 0.7,
           overrideDataColor: DataColor.Yellow
         },
-        { icon: "PeopleRefugeeFamily", data: 0.6 },
+        {
+          icon: "PeopleRefugeeFamily",
+          data: 0.75,
+          overrideDataColor: DataColor.Red
+        },
         { icon: "PeopleChildren", data: 0.5 },
         { icon: "PeopleSchoolBoy", data: 0.4 },
         { icon: "PeopleSchoolGirl", data: 0.3 },
@@ -42,17 +47,17 @@ const widget = {
 };
 
 const widget2 = {
-  title: "EDUCATION GENDER INEQUALITY IN YEMEN",
+  title: "EDUCATION GENDER INEQUALITY IN NORWAY",
   subtitle:
-    "Ongoing crisis further increases the gender gap. This is a subtitle that extends across two lines",
+    "Ongoing crisis further increases the gender gap. This is a subtitle that extends across two lines. This is a subtitle that extends across two lines. This is a subtitle that extends across two lines.",
   source: "Source: Norwegian Refugee Council, May, 2020",
   sections: [
     {
       title: "ENROLLED IN PRIMARY EDUCATION",
       dataColor: DataColor.Orange,
       icons: [
-        { icon: "Food", data: 0.5 },
-        { icon: "Camp", data: 0.7 }
+        { icon: "Food", data: 0.21 },
+        { icon: "Camp", data: 0.3 }
       ]
     },
     {

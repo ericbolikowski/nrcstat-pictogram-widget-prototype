@@ -1,7 +1,7 @@
-export const BackgroundColor = {
-  White: "#ffffff",
-  LightGray: "#919191",
-  DarkGray: "#474747"
+export const BackgroundColorKey = {
+  White: "white",
+  LightGray: "light-grey",
+  DarkGray: "dark-grey"
 };
 export const TextColors = {
   LightestGray: "#C2C2C2",

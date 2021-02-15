@@ -1,5 +1,5 @@
 import React from "react";
-import { DataColor, IconBaseColor } from "./config";
+import { BackgroundColorKey, DataColor, IconBaseColor } from "./config";
 import {
   Camp,
   Education,
@@ -39,13 +39,20 @@ const WidgetIconMap = {
   WASH
 };
 
-export function Widget({ title, subtitle, source, sections }) {
-  const background = "white"; // light-grey dark-grey
+export function Widget({
+  title,
+  subtitle,
+  source,
+  backgroundColor = BackgroundColorKey.White,
+  sections
+}) {
   const iconBaseColor =
-    background === "white" ? IconBaseColor.LightGrey : IconBaseColor.DarkGrey;
+    backgroundColor === "white"
+      ? IconBaseColor.LightGrey
+      : IconBaseColor.DarkGrey;
 
   return (
-    <div className="container mobile background-white">
+    <div className={`container mobile background-${backgroundColor}`}>
       <span className="title">{title}</span>
       <span className="subtitle">{subtitle}</span>
       {sections.map((section, key) => (

@@ -3,7 +3,14 @@ import { v4 as uuidv4 } from "uuid";
 
 import "../Widget.scss";
 
-const ICON_COUNT = 5;
+export function isMobileDevice() {
+  return (
+    typeof window.orientation !== "undefined" ||
+    navigator.userAgent.indexOf("IEMobile") !== -1
+  );
+}
+
+const ICON_COUNT = !isMobileDevice() ? 5 : 10;
 
 export const IconBar = (Icon) => ({ data, iconBaseColor, fillColor }) => {
   const iconFillDegrees = useMemo(
