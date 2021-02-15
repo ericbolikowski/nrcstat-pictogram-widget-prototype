@@ -1,5 +1,10 @@
 import React from "react";
-import { BackgroundColorKey, DataColor, IconBaseColor } from "./config";
+import {
+  BackgroundColorKey,
+  BackgroundColorToIconBaseColorMap,
+  DataColor,
+  IconBaseColor
+} from "./config";
 import {
   Camp,
   Education,
@@ -46,10 +51,7 @@ export function Widget({
   backgroundColor = BackgroundColorKey.White,
   sections
 }) {
-  const iconBaseColor =
-    backgroundColor === "white"
-      ? IconBaseColor.LightGrey
-      : IconBaseColor.DarkGrey;
+  const iconBaseColor = BackgroundColorToIconBaseColorMap[backgroundColor];
 
   return (
     <div className={`container mobile background-${backgroundColor}`}>

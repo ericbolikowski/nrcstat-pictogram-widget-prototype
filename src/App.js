@@ -8,7 +8,7 @@ const widget = {
   subtitle:
     "Ongoing crisis further increases the gender gap. This is a subtitle that extends across two lines",
   source: "Source: Norwegian Refugee Council, May, 2020",
-  backgroundColor: BackgroundColorKey.White,
+  backgroundColor: BackgroundColorKey.DarkGray,
   sections: [
     {
       title: "ENROLLED IN PRIMARY EDUCATION",
@@ -51,6 +51,7 @@ const widget2 = {
   subtitle:
     "Ongoing crisis further increases the gender gap. This is a subtitle that extends across two lines. This is a subtitle that extends across two lines. This is a subtitle that extends across two lines.",
   source: "Source: Norwegian Refugee Council, May, 2020",
+  backgroundColor: BackgroundColorKey.LightGray,
   sections: [
     {
       title: "ENROLLED IN PRIMARY EDUCATION",

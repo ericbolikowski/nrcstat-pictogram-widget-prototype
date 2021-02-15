@@ -18,3 +18,9 @@ export const IconBaseColor = {
   LightGrey: "#c2c2c2",
   DarkGrey: "#ededed"
 };
+
+export const BackgroundColorToIconBaseColorMap = {
+  [BackgroundColorKey.White]: IconBaseColor.LightGrey,
+  [BackgroundColorKey.White]: IconBaseColor.DarkGrey,
+  [BackgroundColorKey.White]: IconBaseColor.LightGrey
+};
