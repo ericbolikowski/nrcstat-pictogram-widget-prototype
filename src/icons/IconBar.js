@@ -1,18 +1,13 @@
-import React, { useMemo, useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useMemo, useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { isMobileDevice } from '../isMobileDevice';
 
-import "../Widget.scss";
+import '../Widget.scss';
 
-export function isMobileDevice() {
-  return (
-    typeof window.orientation !== "undefined" ||
-    navigator.userAgent.indexOf("IEMobile") !== -1
-  );
-}
-
-const ICON_COUNT = !isMobileDevice() ? 5 : 10;
+const ICON_COUNT = isMobileDevice() ? 5 : 10;
 
 export const IconBar = (Icon) => ({ data, iconBaseColor, fillColor }) => {
+  // eslint-disable-next-line
   const iconFillDegrees = useMemo(
     () =>
       Array(ICON_COUNT)

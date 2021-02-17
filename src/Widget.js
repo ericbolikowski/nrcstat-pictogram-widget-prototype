@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   BackgroundColorKey,
   BackgroundColorToIconBaseColorMap,
   DataColor,
-  IconBaseColor
-} from "./config";
+  IconBaseColor,
+} from './config';
 import {
   Camp,
   Education,
@@ -21,9 +21,10 @@ import {
   PeopleChildren,
   PeopleRefugeeFamily,
   PeopleRefugeeFamilyAlt,
-  PeopleRefugeesRunning
-} from "./icons/index.js";
-import "./Widget.scss";
+  PeopleRefugeesRunning,
+} from './icons/index.js';
+import { isMobileDevice } from './isMobileDevice';
+import './Widget.scss';
 
 const WidgetIconMap = {
   PeopleFemale,
@@ -41,20 +42,26 @@ const WidgetIconMap = {
   Food,
   Legal,
   Shelter,
-  WASH
+  WASH,
 };
+
+const isMobile = isMobileDevice();
 
 export function Widget({
   title,
   subtitle,
   source,
   backgroundColor = BackgroundColorKey.White,
-  sections
+  sections,
 }) {
   const iconBaseColor = BackgroundColorToIconBaseColorMap[backgroundColor];
 
   return (
-    <div className={`container mobile background-${backgroundColor}`}>
+    <div
+      className={`container ${isMobile ? 'mobile' : 'desktop'} ${
+        sections.length > 1 ? 'multiple-sections' : 'single-section'
+      } background-${backgroundColor}`}
+    >
       <span className="title">{title}</span>
       <span className="subtitle">{subtitle}</span>
       {sections.map((section, key) => (
@@ -62,9 +69,7 @@ export function Widget({
           <span className="section-title">{section.title}</span>
           {section.icons.map((icon, key) => {
             const Icon = WidgetIconMap[icon.icon];
-            const fillColor = icon.overrideDataColor
-              ? icon.overrideDataColor
-              : section.dataColor;
+            const fillColor = icon.overrideDataColor ? icon.overrideDataColor : section.dataColor;
             return (
               <Icon
                 key={key}
