@@ -59,28 +59,29 @@ export function Widget({
   return (
     <div
       className={`container ${isMobile ? 'mobile' : 'desktop'} ${
-        sections.length > 1 ? 'multiple-sections' : 'single-section'
+        sections?.length > 1 ? 'multiple-sections' : 'single-section'
       } background-${backgroundColor}`}
     >
-      <span className="title">{title}</span>
-      <span className="subtitle">{subtitle}</span>
-      {sections.map((section, key) => (
-        <div className="section" key={key}>
-          <span className="section-title">{section.title}</span>
-          {section.icons.map((icon, key) => {
-            const Icon = WidgetIconMap[icon.icon];
-            const fillColor = icon.overrideDataColor ? icon.overrideDataColor : section.dataColor;
-            return (
-              <Icon
-                key={key}
-                data={icon.data}
-                iconBaseColor={iconBaseColor}
-                fillColor={fillColor}
-              />
-            );
-          })}
-        </div>
-      ))}
+      {title && <span className="title">{title}</span>}
+      {subtitle && <span className="subtitle">{subtitle}</span>}
+      {sections &&
+        sections.map((section, key) => (
+          <div className="section" key={key}>
+            {section.title && <span className="section-title">{section.title}</span>}
+            {section.icons?.map((icon, key) => {
+              const Icon = WidgetIconMap[icon.icon];
+              const fillColor = icon.overrideDataColor ? icon.overrideDataColor : section.dataColor;
+              return (
+                <Icon
+                  key={key}
+                  data={icon.data}
+                  iconBaseColor={iconBaseColor}
+                  fillColor={fillColor}
+                />
+              );
+            })}
+          </div>
+        ))}
       <span className="source">{source}</span>
     </div>
   );
