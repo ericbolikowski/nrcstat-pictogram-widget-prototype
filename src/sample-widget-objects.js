@@ -3,7 +3,7 @@ import { DataColor, BackgroundColorKey, Icon } from "./config";
 export const samplePictogramWidgetObjects = [
   /* MULTIPLE SECTIONS (PAGE 2 OF SPEC) */
   {
-    title: "EDUCATION GENDER INEQUALITY IN YEMEN",
+    title: "EDUCATION GENDER INEQUALITY IN YEMEN Hei Lars",
     subtitle: "Ongoing crisis further increases the gender gap.",
     source: "Source: Norwegian Refugee Council, May, 2020",
     backgroundColor: BackgroundColorKey.LightGray,
