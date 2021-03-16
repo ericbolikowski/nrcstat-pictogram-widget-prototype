@@ -12,7 +12,11 @@ export const samplePictogramWidgetObjects = [
         title: "ENROLLED IN PRIMARY EDUCATION",
         dataColor: DataColor.Orange,
         icons: [
-          { icon: Icon.PeopleSchoolGirl, data: 0.5 },
+          {
+            icon: Icon.PeopleSchoolGirl,
+            data: 0.56,
+            overrideDataColor: DataColor.Blue
+          },
           { icon: Icon.PeopleSchoolBoy, data: 0.8 }
         ]
       },
