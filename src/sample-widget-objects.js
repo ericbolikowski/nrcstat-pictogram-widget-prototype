@@ -182,22 +182,22 @@ export const samplePictogramWidgetObjects = [
           { icon: "PeopleRefugeesRunning", data: 0.7 },
           {
             icon: "PeopleRefugeeFamilyAlt",
-            data: 0.7,
+            data: 0.05,
             overrideDataColor: DataColor.Yellow
           },
           {
             icon: "PeopleRefugeeFamily",
-            data: 0.75,
+            data: 0.15,
             overrideDataColor: DataColor.Red
           },
-          { icon: "PeopleChildren", data: 0.5 },
-          { icon: "PeopleSchoolBoy", data: 0.4 },
-          { icon: "PeopleSchoolGirl", data: 0.3 },
-          { icon: "PeopleLittleGirl", data: 0.2 },
-          { icon: "PeopleLittleBoy", data: 0.1 },
-          { icon: "PeopleFemale", data: 0.7 },
-          { icon: "PeopleMale", data: 0.7 },
-          { icon: "Camp", data: 0.7 }
+          { icon: "PeopleChildren", data: 0.25 },
+          { icon: "PeopleSchoolBoy", data: 0.35 },
+          { icon: "PeopleSchoolGirl", data: 0.45 },
+          { icon: "PeopleLittleGirl", data: 0.55 },
+          { icon: "PeopleLittleBoy", data: 0.65 },
+          { icon: "PeopleFemale", data: 0.75 },
+          { icon: "PeopleMale", data: 0.85 },
+          { icon: "Camp", data: 0.95 }
         ]
       },
       {
@@ -205,7 +205,7 @@ export const samplePictogramWidgetObjects = [
         dataColor: DataColor.Blue,
         icons: [
           { icon: "Legal", data: 0.25 },
-          { icon: "Shelter", data: 0.3 }
+          { icon: "Shelter", data: 0.35 }
         ]
       }
     ]
@@ -253,3 +253,5 @@ export const samplePictogramWidgetObjects = [
     ]
   }
 ];
+
+console.log(JSON.stringify(samplePictogramWidgetObjects, 0, 2));
